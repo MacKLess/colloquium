@@ -60,5 +60,9 @@ group :development do
   gem 'letter_opener'
 end
 
+gem 'ckeditor', '~> 4.1'
+
+gem 'simple_form', '~> 3.2'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
