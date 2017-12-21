@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :update, :show, :delete]
+  before_action :find_post, only: [:edit, :update, :show, :destroy]
+  before_action :authenticate_user!, :only => [:index]
 
   #Index action to render all posts
   def index
@@ -8,6 +9,7 @@ class PostsController < ApplicationController
 
  # Show action renders individual post after retrieving id
    def show
+     @post = Post.find(params[:id])
    end
 
   # New action for creating post
@@ -29,11 +31,13 @@ class PostsController < ApplicationController
 
   # Edit action retrieves the post and renders the edit page
   def edit
+    @post = Post.find(params[:id])
   end
 
   # Update action updates the post with the new information
   def update
-    if @post.update_attributes(post_params)
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
       flash[:notice] = "Successfully updated post!"
       redirect_to post_path(@posts)
     else
@@ -47,7 +51,7 @@ class PostsController < ApplicationController
       flash[:notice] = "Successfully deleted post!"
       redirect_to posts_path
     end
-  end 
+  end
 
 private
   def post_params

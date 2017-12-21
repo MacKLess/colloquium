@@ -36,6 +36,32 @@ _This is a social app for members of the Criminal Justice field centered around 
   * Admins can remove user's profile
   * Admins can remove any posts on community forum
 
+## Future Specifications
+
+* Users
+  * Users can search the database for profiles that match certain interest # keywords.
+  * Users can contact other users via direct messaging (IM)
+  * Users can block other users from contacting them via IM
+
+  * Users can elect to have available projects emailed to them/ placed in top queue position in their feed based on keywords that match their # interests
+  * Users can apply to participate in a posted project.
+  * Users can submit proposed projects to SPD for future research
+* Admin
+  * Admin can post about available research projects (unassigned)
+  * Admin can review research proposal submissions and either:
+    * reject,
+    * approve, or
+    * require additional information
+  * Can post papers/ results from completed research projects
+  * Maintain a list of ongoing and completed projects
+* Projects
+  * Automatic emails will be sent to all parties of a proposed project at the following times:
+    * Successful submission of proposal (with estimated time of response deadline)
+    * Proposal decision
+  * Approved projects will be slated into a timeline of either: 1, 3, or 6 years.
+  * Parties of an approved project will receive calendar reminders of all impending deadlines.
+
+
 ## Support and contact details
 
 _Please contact [ldmackrell@gmail.com](mailto: ldmackrell@gmail.com) with questions, comments, or issues._
